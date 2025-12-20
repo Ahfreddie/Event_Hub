@@ -1,0 +1,22 @@
+body {
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: white;
+}
+
+.container {
+  background-color: aliceblue;
+  width: 85%;
+  margin: 10px auto;
+  padding: 10px 20px;
+}
+
+.navigation li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 15px;
+}
+
+li a {
+  text-decoration: none;
+}
