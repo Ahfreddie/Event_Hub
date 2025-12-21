@@ -11,12 +11,26 @@ body {
   padding: 10px 20px;
 }
 
+.head {
+  background-image: url(https://unsplash.com/photos/ZODcBkEohk8/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzY2MzQ0ODc2fA&force=true&w=2400);
+  background-attachment: fixed;
+  background-clip: content-box;
+  height: 80vh;
+  color: #e6e6fa;
+  border-radius: 10px;
+  justify-content: center;
+}
+
 .navigation li {
   list-style: none;
   display: inline-block;
   padding: 0 15px;
+  background-color: 7f00ff;
 }
 
 li a {
   text-decoration: none;
+  color: #e6e6fa;
+
+  margin: 10px;
 }
