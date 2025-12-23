@@ -1,31 +1,68 @@
 body {
   font-size: 1.5rem;
-  text-align: center;
-  background-color: white;
+  background-image: linear-gradient(to right, #ff295c, #9f08d7);
+  margin: 0;
 }
 
 .container {
-  background-color: aliceblue;
   width: 85%;
-  margin: 10px auto;
-  padding: 10px 20px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: linear-gradient(
+    to bottom,
+    #1c1c2b,
+    #2a0f3f
+  ); /* dark gradient that contrasts with the body gradient */
+  color: #e6e6fa;
+}
+
+header h1 {
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+}
+
+header::after {
+  content: "";
+  width: 80px;
+  height: 2px;
+  margin: 0 auto;
+  background: linear-gradient(to right, #ff295c, #9f08d7);
 }
 
 .head {
-  background-image: url(https://unsplash.com/photos/ZODcBkEohk8/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzY2MzQ0ODc2fA&force=true&w=2400);
-  background-attachment: fixed;
-  background-clip: content-box;
+  display: flex; /* activated the flexbox for better layout */
   height: 80vh;
-  color: #e6e6fa;
   border-radius: 10px;
-  justify-content: center;
+  justify-content: center; /* for horizontal centering */
+  align-items: center; /* for vertical centering */
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, #2b0a3d, #3b0f5f, #4a136f, #2a082f)
+      padding-box,
+    linear-gradient(135deg, #ff295c, #9f08d7) border-box;
+  /* dark purple gradient  for the head that's not too loud and a complementary gradient border in theme with the body background */
+  box-shadow: 0 0 10px rgba(255, 41, 92, 0.25);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  /* Stack things vertically */
+  gap: 1.5rem;
+  /* control spacing without margins */
+}
+
+.navigation {
+  padding-top: 0.5rem;
 }
 
 .navigation li {
   list-style: none;
   display: inline-block;
   padding: 0 15px;
-  background-color: 7f00ff;
+  background-color: #7f00ff;
 }
 
 li a {
