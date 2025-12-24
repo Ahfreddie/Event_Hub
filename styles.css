@@ -1,7 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap");
+
 body {
   font-size: 1.5rem;
   background-image: linear-gradient(to right, #ff295c, #9f08d7);
   margin: 0;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: #e6e6fa;
+}
+
+:root {
+  scroll-behavior: smooth;
+  /* enables smooth scrolling animation */
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .container {
@@ -22,16 +40,21 @@ header h1 {
   letter-spacing: 0.1rem;
 }
 
+/* Introduces a focal point that visually anchors the hero */
 header::after {
   content: "";
   width: 80px;
-  height: 2px;
+  height: 4px;
   margin: 0 auto;
-  background: linear-gradient(to right, #ff295c, #9f08d7);
+  background: linear-gradient(to right, #e9053a, #ff295c, #9f08d7);
+  border-radius: 5px;
 }
 
 .head {
   display: flex; /* activated the flexbox for better layout */
+  position: relative;
+  /* needed for positioning hero cover img */
+  overflow: hidden;
   height: 80vh;
   border-radius: 10px;
   justify-content: center; /* for horizontal centering */
@@ -41,9 +64,31 @@ header::after {
   border: 2px solid transparent;
   background: linear-gradient(135deg, #2b0a3d, #3b0f5f, #4a136f, #2a082f)
       padding-box,
-    linear-gradient(135deg, #ff295c, #9f08d7) border-box;
+    linear-gradient(135deg, #e9053a, #ff295c, #9f08d7) border-box;
   /* dark purple gradient  for the head that's not too loud and a complementary gradient border in theme with the body background */
   box-shadow: 0 0 10px rgba(255, 41, 92, 0.25);
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.4);
+}
+
+.hero-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Perfectly center img */
+  width: 100%;
+  height: 100%; /* keep img from overflowing */
+  object-fit: cover;
+  opacity: 0.3;
+  z-index: 0;
+  border-radius: 10px;
+  /* send it behind the header content */
+  filter: blur(2px);
+}
+
+.head header {
+  position: relative;
+  z-index: 1;
+  /* ensures header sits on top of the image */
 }
 
 header {
@@ -62,7 +107,7 @@ header {
   list-style: none;
   display: inline-block;
   padding: 0 15px;
-  background-color: #7f00ff;
+  /* background-color: #7f00ff; */
 }
 
 li a {
@@ -70,4 +115,33 @@ li a {
   color: #e6e6fa;
 
   margin: 10px;
+}
+
+.navigation a {
+  position: relative;
+  padding: 0.2rem 0;
+}
+
+.navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #ff295c;
+  transition: width 0.3s ease;
+}
+
+.navigation a:hover::after {
+  width: 100%;
+}
+
+hr {
+  border: none;
+  width: 80%;
+  height: 2px;
+  margin: 50px auto;
+  background: linear-gradient(to right, #e9053a, #ff295c, #9f08d7);
+  border-radius: 8px;
 }
