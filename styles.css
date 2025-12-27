@@ -135,7 +135,7 @@ li a {
   bottom: -4px;
   width: 0;
   height: 2px;
-  background-color: #ff295c;
+  background: linear-gradient(to right, #e9053a, #ff295c, #9f08d7);
   transition: width 0.3s ease;
 }
 
@@ -233,4 +233,31 @@ p {
 
 .card:hover::before {
   opacity: 1;
+}
+
+.card time {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(230, 230, 250, 0.75);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(225, 41, 92, 0.12);
+  border: 1px solid rgba(255, 41, 92, 0.35);
+}
+
+.card:hover time {
+  background: rgba(225, 41, 92, 0.2);
+  color: #ffffff;
+}
+
+#upcoming-events .card time {
+  background: rgba(159, 8, 215, 0.15);
+  border-color: rgba(158, 8, 215, 0.4);
+}
+
+#past-events .card time {
+  opacity: 0.6;
 }
